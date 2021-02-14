@@ -10,8 +10,8 @@ docker push renators/multi-client:$SHA
 docker push renators/multi-server:$SHA
 docker push renators/multi-worker:$SHA
 
-kublectl apply -f k8s
+kubectl apply -f k8s
 
-kublectl set image deployments/client-deployment client=renators/multi-client:$SHA
-kublectl set image deployments/server-deployment server=renators/multi-server:$SHA
-kublectl set image deployments/worker-deployment worker=renators/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=renators/multi-client:$SHA
+kubectl set image deployments/server-deployment server=renators/multi-server:$SHA
+kubectl set image deployments/worker-deployment worker=renators/multi-worker:$SHA
